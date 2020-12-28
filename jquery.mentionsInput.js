@@ -350,6 +350,10 @@
             //If the key pressed was the backspace
             if (e.keyCode === KEY.BACKSPACE) {
                 inputBuffer = inputBuffer.slice(0, -1 + inputBuffer.length); // Can't use splice, not available in IE
+                if (inputBuffer.length === 0) {
+                    hideAutoComplete();
+                }
+
                 return;
             }
 
@@ -463,7 +467,7 @@
         //Search into data list passed as parameter
         function doSearch(query) {
             //If the query is not null, undefined, empty and has the minimum chars
-            if (query && query.length && query.length >= settings.minChars) {
+            if (typeof query === 'string' && query.length >= settings.minChars) {
                 //Call the onDataRequest function and then call the populateDropDrown
                 settings.onDataRequest.call(this, 'search', query, function (responseData) {
                     populateDropdown(query, responseData);
