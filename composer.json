@@ -1,0 +1,14 @@
+{
+    "name": "CheJam/jquery-mentions-input",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "bower-asset/underscore": "^1.11"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
