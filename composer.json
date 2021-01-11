@@ -1,5 +1,5 @@
 {
-    "name": "CheJam/jquery-mentions-input",
+    "name": "chejam/jquery-mentions-input",
     "type": "library",
     "license": "MIT",
     "require": {
